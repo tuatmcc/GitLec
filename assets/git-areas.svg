@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="220" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">Git の3つの領域</title>
+  <desc id="desc">作業ツリー、ステージング、ローカルリポジトリの関係図</desc>
+  <style>
+    .box { fill:#f8fafc; stroke:#0f172a; stroke-width:2; rx:12; }
+    .label { font: 16px sans-serif; fill:#0f172a; font-weight:600; }
+    .small { font: 13px sans-serif; fill:#334155; }
+    .arrow { stroke:#0f172a; stroke-width:2; marker-end:url(#arrowhead); fill:none; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a" />
+    </marker>
+  </defs>
+
+  <rect class="box" x="30" y="40" width="200" height="120"/>
+  <text class="label" x="130" y="70" text-anchor="middle">作業ツリー</text>
+  <text class="small" x="130" y="95" text-anchor="middle">編集中のファイル</text>
+
+  <rect class="box" x="280" y="40" width="200" height="120"/>
+  <text class="label" x="380" y="70" text-anchor="middle">ステージング</text>
+  <text class="small" x="380" y="95" text-anchor="middle">git add</text>
+
+  <rect class="box" x="530" y="40" width="200" height="120"/>
+  <text class="label" x="630" y="70" text-anchor="middle">ローカルリポジトリ</text>
+  <text class="small" x="630" y="95" text-anchor="middle">git commit</text>
+
+  <line class="arrow" x1="230" y1="100" x2="280" y2="100"/>
+  <line class="arrow" x1="480" y1="100" x2="530" y2="100"/>
+
+  <text class="small" x="255" y="90" text-anchor="middle">add</text>
+  <text class="small" x="505" y="90" text-anchor="middle">commit</text>
+</svg>

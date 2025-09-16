@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="220" viewBox="0 0 780 220" role="img" aria-labelledby="title desc">
+  <title id="title">ローカルとリモート</title>
+  <desc id="desc">ローカルリポジトリとGitHubのリモートリポジトリの push / pull の関係図</desc>
+  <style>
+    .box { fill:#f8fafc; stroke:#0f172a; stroke-width:2; rx:12; }
+    .label { font: 16px sans-serif; fill:#0f172a; font-weight:600; }
+    .small { font: 13px sans-serif; fill:#334155; }
+    .arrow { stroke:#0f172a; stroke-width:2; marker-end:url(#head); fill:none; }
+    .arrow2 { stroke:#10b981; stroke-width:2; marker-end:url(#head2); fill:none; }
+  </style>
+  <defs>
+    <marker id="head" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a" />
+    </marker>
+    <marker id="head2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981" />
+    </marker>
+  </defs>
+
+  <rect class="box" x="60" y="50" width="240" height="120"/>
+  <text class="label" x="180" y="80" text-anchor="middle">ローカル</text>
+  <text class="small" x="180" y="105" text-anchor="middle">作業ツリー/ステージ/コミット</text>
+
+  <rect class="box" x="480" y="50" width="240" height="120"/>
+  <text class="label" x="600" y="80" text-anchor="middle">リモート（GitHub）</text>
+  <text class="small" x="600" y="105" text-anchor="middle">origin / main</text>
+
+  <line class="arrow" x1="300" y1="110" x2="480" y2="110"/>
+  <text class="small" x="390" y="100" text-anchor="middle">push</text>
+
+  <line class="arrow2" x1="480" y1="140" x2="300" y2="140"/>
+  <text class="small" x="390" y="160" text-anchor="middle">pull / fetch</text>
+</svg>

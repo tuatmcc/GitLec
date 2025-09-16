@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="260" viewBox="0 0 820 260" role="img" aria-labelledby="title desc">
+  <title id="title">Pull Request の基本フロー</title>
+  <desc id="desc">ローカルでの作業から PR 作成、レビュー、マージまでの図解</desc>
+  <style>
+    .box { fill:#f8fafc; stroke:#0f172a; stroke-width:2; rx:12; }
+    .label { font: 15px sans-serif; fill:#0f172a; font-weight:600; }
+    .small { font: 13px sans-serif; fill:#334155; }
+    .arrow { stroke:#0f172a; stroke-width:2; marker-end:url(#arrowhead); fill:none; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a" />
+    </marker>
+  </defs>
+
+  <rect class="box" x="30" y="40" width="170" height="120"/>
+  <text class="label" x="115" y="70" text-anchor="middle">ローカル作業</text>
+  <text class="small" x="115" y="95" text-anchor="middle">branch で変更</text>
+
+  <rect class="box" x="230" y="40" width="170" height="120"/>
+  <text class="label" x="315" y="70" text-anchor="middle">push</text>
+  <text class="small" x="315" y="95" text-anchor="middle">origin に送信</text>
+
+  <rect class="box" x="430" y="40" width="170" height="120"/>
+  <text class="label" x="515" y="70" text-anchor="middle">Pull Request</text>
+  <text class="small" x="515" y="95" text-anchor="middle">レビューとCI</text>
+
+  <rect class="box" x="630" y="40" width="170" height="120"/>
+  <text class="label" x="715" y="70" text-anchor="middle">merge</text>
+  <text class="small" x="715" y="95" text-anchor="middle">main に反映</text>
+
+  <line class="arrow" x1="200" y1="100" x2="230" y2="100"/>
+  <line class="arrow" x1="400" y1="100" x2="430" y2="100"/>
+  <line class="arrow" x1="600" y1="100" x2="630" y2="100"/>
+</svg>

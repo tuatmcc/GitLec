@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" viewBox="0 0 760 260" role="img" aria-labelledby="title desc">
+  <title id="title">ブランチの基本</title>
+  <desc id="desc">main から feature ブランチが分岐し、再びマージされる様子</desc>
+  <style>
+    .node { fill:#0ea5e9; }
+    .node2 { fill:#10b981; }
+    .text { font:14px sans-serif; fill:#0f172a; }
+    .axis { stroke:#0f172a; stroke-width:2; }
+    .merge { stroke:#10b981; stroke-width:3; fill:none; marker-end:url(#arrow2); }
+    .line { stroke:#0ea5e9; stroke-width:3; fill:none; marker-end:url(#arrow1); }
+  </style>
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0ea5e9" />
+    </marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981" />
+    </marker>
+  </defs>
+
+  <text class="text" x="40" y="35">main</text>
+  <line class="axis" x1="80" y1="30" x2="700" y2="30"/>
+  <circle class="node" cx="140" cy="30" r="6"/>
+  <circle class="node" cx="220" cy="30" r="6"/>
+  <circle class="node" cx="300" cy="30" r="6"/>
+
+  <text class="text" x="40" y="155">feature/add-hobby</text>
+  <path class="line" d="M300,30 C340,30 340,150 380,150"/>
+  <circle class="node2" cx="380" cy="150" r="6"/>
+  <circle class="node2" cx="460" cy="150" r="6"/>
+  <circle class="node2" cx="540" cy="150" r="6"/>
+
+  <path class="merge" d="M540,150 C580,150 580,30 620,30"/>
+  <circle class="node" cx="620" cy="30" r="6"/>
+
+  <text class="text" x="280" y="55">branch</text>
+  <text class="text" x="600" y="55">merge</text>
+</svg>
